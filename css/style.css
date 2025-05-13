@@ -587,6 +587,11 @@ img {
   color: var(--white); /* Mantener blanco para contraste sobre la imagen oscura */
 }
 
+/* En la sección "Location Section", cambiar el color del título a dorado */
+.location-content .section-title {
+  color: var(--gold); /* Cambiado a dorado */
+}
+
 /* Nueva sección: Galería de Fotos con PhotoSwipe - Mejorada */
 .photo-gallery {
   text-align: center;
@@ -682,60 +687,39 @@ figure {
   gap: 3rem;
 }
 
+/* En la sección "Código de Vestimenta", cambiar el fondo a azul, títulos dorados y letras blancas */
 .dress-code-option {
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  background-color: var(--gray-light); /* Cambiado a gris muy claro */
+  background-color: var(--navy); /* Cambiado a azul marino */
   border-radius: var(--border-radius);
   padding: 2.5rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--gray); /* Añadido borde para mejor definición */
-}
-
-.dress-code-option:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.dress-code-icon {
-  font-size: 3rem;
-  color: var(--gold); /* Mantenido en dorado */
-  margin-bottom: 1.5rem;
+  border: 1px solid var(--gray);
+  color: var(--white); /* Texto en blanco */
 }
 
 .dress-code-title {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
-  color: var(--navy); /* Cambiado a azul marino */
+  color: var(--gold); /* Cambiado a dorado */
 }
 
 .dress-code-content {
-  color: var(--gray-dark); /* Cambiado para mejor contraste en fondo blanco */
+  color: var(--white); /* Cambiado a blanco */
   text-align: left;
 }
 
 .dress-code-content p {
   margin-bottom: 1.5rem;
-  line-height: 1.8; /* Mejorado para mejor legibilidad */
-}
-
-.dress-code-list {
-  list-style: none;
-  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--white); /* Asegurar que el texto sea blanco */
 }
 
 .dress-code-list li {
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-}
-
-.dress-code-list li i {
-  color: var(--gold); /* Mantenido en dorado */
-  margin-right: 0.75rem;
-  font-size: 1rem;
+  color: var(--white); /* Asegurar que el texto sea blanco */
 }
 
 .dress-code-note {
