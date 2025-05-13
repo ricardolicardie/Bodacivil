@@ -774,12 +774,12 @@ figure {
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  background-color: var(--gray-light); /* Cambiado a gris muy claro */
+  background-color: var(--gray); /* Cambiado a gris muy claro */
   border-radius: var(--border-radius);
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: var(--white);
+  color: var(--gray-dark);
   border: 1px solid var(--gray); /* Añadido borde para mejor definición */
 }
 
