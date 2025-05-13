@@ -774,7 +774,7 @@ figure {
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  background-color: var(--gray); /* Cambiado a gris muy claro */
+  background-color: var(--gray-light); /* Cambiado a gris muy claro */
   border-radius: var(--border-radius);
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -802,7 +802,7 @@ figure {
 
 .gift-option-description {
   margin-bottom: 1.5rem;
-  color: var(--white);
+  color: var(--gray-dark);
   line-height: 1.8; /* Mejorado para mejor legibilidad */
 }
 
