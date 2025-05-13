@@ -742,7 +742,7 @@ figure {
 }
 
 .dress-code-note {
-  background-color: #192a56;
+  background-color: var(--black);
   padding: 1rem;
   border-radius: var(--border-radius);
   font-style: italic;
