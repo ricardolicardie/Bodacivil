@@ -1,0 +1,298 @@
+/* Variables */
+:root {
+  --primary: #0a0a0a;
+  --secondary: #d4af37;
+  --gold: #d4af37;
+  --gold-light: #e5c76b;
+  --gold-dark: #b39429;
+  --background: #121212;
+  --text: #d4af37;
+  --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Brooklyn";
+  src: url("../fonts/Brooklyn.otf") format("opentype"), url("../fonts/Brooklyn.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("../fonts/Bodoni.otf") format("opentype"), url("../fonts/Bodoni.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Seal Container - Ahora a pantalla completa */
+.seal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--gold) 0%, var(--gold-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Floral Decorations */
+.floral-decoration {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.floral-decoration.left {
+  left: 0;
+  top: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 800"><path d="M50,200 Q70,160 100,140 Q80,180 120,200 Q100,220 80,260 Q60,240 50,200 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M40,300 Q60,260 90,240 Q70,280 110,300 Q90,320 70,360 Q50,340 40,300 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M30,400 Q50,360 80,340 Q60,380 100,400 Q80,420 60,460 Q40,440 30,400 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M40,500 Q60,460 90,440 Q70,480 110,500 Q90,520 70,560 Q50,540 40,500 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M50,600 Q70,560 100,540 Q80,580 120,600 Q100,620 80,660 Q60,640 50,600 Z" fill="none" stroke="%23000000" stroke-width="2"/></svg>');
+}
+
+.floral-decoration.right {
+  right: 0;
+  top: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 800"><path d="M150,200 Q130,160 100,140 Q120,180 80,200 Q100,220 120,260 Q140,240 150,200 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M160,300 Q140,260 110,240 Q130,280 90,300 Q110,320 130,360 Q150,340 160,300 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M170,400 Q150,360 120,340 Q140,380 100,400 Q120,420 140,460 Q160,440 170,400 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M160,500 Q140,460 110,440 Q130,480 90,500 Q110,520 130,560 Q150,540 160,500 Z" fill="none" stroke="%23000000" stroke-width="2"/><path d="M150,600 Q130,560 100,540 Q120,580 80,600 Q100,620 120,660 Q140,640 150,600 Z" fill="none" stroke="%23000000" stroke-width="2"/></svg>');
+}
+
+/* Seal Content */
+.seal-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 90%;
+}
+
+/* Invitation Text */
+.invitation-text {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.invitation-text h1 {
+  font-family: "Brooklyn", serif;
+  font-size: 5.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--primary);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.invitation-text p {
+  font-family: "Bodoni", serif;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--primary);
+}
+
+/* Seal Circle */
+.seal-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.seal-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.seal-circle span {
+  font-family: "Bodoni", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+/* Seal Instruction */
+.seal-instruction {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* Realistic Seal Effect */
+.seal-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 1;
+}
+
+.seal-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0) 3%,
+    rgba(0, 0, 0, 0.05) 6%
+  );
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* Hover Effect */
+.seal-container:hover .seal-circle {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.seal-container:active .seal-circle {
+  transform: scale(0.98);
+}
+
+/* Fade out animation */
+.fade-out {
+  animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .invitation-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .invitation-text p {
+    font-size: 1.3rem;
+  }
+
+  .seal-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .seal-circle span {
+    font-size: 2rem;
+  }
+
+  .floral-decoration {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .invitation-text h1 {
+    font-size: 2rem;
+  }
+
+  .invitation-text p {
+    font-size: 1rem;
+  }
+
+  .seal-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .seal-circle span {
+    font-size: 1.6rem;
+  }
+
+  .floral-decoration {
+    width: 150px;
+  }
+
+  .seal-instruction {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .invitation-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .invitation-text p {
+    font-size: 0.9rem;
+  }
+
+  .seal-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .seal-circle span {
+    font-size: 1.4rem;
+  }
+
+  .floral-decoration {
+    width: 100px;
+  }
+}
+

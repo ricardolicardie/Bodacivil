@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda | Elizabeth & Ricardo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600,1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- EmailJS se inicializará en emailjs-config.js -->
+    <script src="js/index-redirect.js"></script>
+    
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in slide-up">
+            <h1>
+                <span>Elizabeth</span>
+                <span class="ampersand">Y</span>
+                <span>Ricardo</span>
+            </h1>
+            <p class="subtitle">Wedding</p>
+            
+            <div class="countdown-container">
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div id="days" class="countdown-number">00</div>
+                        <div class="countdown-label">Días</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div id="hours" class="countdown-number">00</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div id="minutes" class="countdown-number">00</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div id="seconds" class="countdown-number">00</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="music-player">
+            <audio id="background-music" preload="auto" loop>
+                <source src="music/weddingsong.mp3" type="audio/mp3">
+                <source src="music/wedding-song.ogg" type="audio/ogg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <button id="music-toggle" class="music-toggle pulse-attention" aria-label="Reproducir música de fondo">
+                <i class="fas fa-play" id="play-icon"></i>
+                <i class="fas fa-pause" id="pause-icon" style="display: none;"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section class="invitation section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in slide-up">¡ Nos Casamos !</h2>
+            <div class="divider fade-in slide-up" data-delay="200"></div>
+            <div class="invitation-text fade-in slide-up" data-delay="400">
+                <p>Queremos compartir contigo la alegría de este nuevo comienzo, y celebrar juntos la bendición y el deleite que es el matrimonio. Tu presencia será un regalo muy especial para nosotros.</p>
+                <p>"Por eso el hombre dejará a su padre y a su madre, y se unirá a su esposa, y serán una sola carne." <br>Génesis 2:24</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section-padding light-bg">
+        <div class="container">
+            <h2 class="section-title fade-in slide-up">Save the Date</h2>
+            <div class="divider fade-in slide-up" data-delay="200"></div>
+            
+            <!-- Nuevo subtítulo con la fecha -->
+            <h3 class="section-subtitle fade-in slide-up" data-delay="300">31 de Mayo de 2025</h3>
+            
+            <!-- Botón para guardar la fecha -->
+            <div class="btn-group fade-in slide-up" data-delay="400">
+                    <a href="https://calendar.app.google/2QkSFJtmEYcaQw6t9" target="_blank" class="btn btn-gift">
+                        <i class="fas fa-calendar-plus"></i> Guardar Fecha
+                    </a>
+            </div>
+            
+            <div class="gallery-container fade-in slide-up" data-delay="500">
+                <div class="gallery-wrapper">
+                    <div class="gallery-track">
+                        <!-- Las imágenes se generarán con JavaScript -->
+                    </div>
+                </div>
+                <div class="gallery-dots">
+                    <!-- Los puntos se generarán con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in slide-up">Itinerario</h2>
+            <div class="divider fade-in slide-up" data-delay="200"></div>
+            
+            <div class="timeline-container fade-in slide-up" data-delay="400">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-event fade-in slide-right" data-delay="600">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content-left">
+                        <div class="timeline-time">3:00 PM</div>
+                    </div>
+                    <div class="timeline-content timeline-content-right">
+                        <div class="timeline-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <h3 class="timeline-title">Recepción</h3>
+                        <p class="timeline-description">Bienvenida a los invitados en el lugar del evento</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-event fade-in slide-left" data-delay="800">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content-left">
+                        <div class="timeline-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3 class="timeline-title">Ceremonia</h3>
+                        <p class="timeline-description">Inicio de la ceremonia donde uniremos nuestras vidas</p>
+                    </div>
+                    <div class="timeline-content timeline-content-right">
+                        <div class="timeline-time">4:00 PM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-event fade-in slide-right" data-delay="1000">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content-left">
+                        <div class="timeline-time">6:00 PM</div>
+                    </div>
+                    <div class="timeline-content timeline-content-right">
+                        <div class="timeline-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="timeline-title">Comida</h3>
+                        <p class="timeline-description">Comida preparada especialmente para la ocasión</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-event fade-in slide-left" data-delay="1200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content-left">
+                        <div class="timeline-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="timeline-title">Brindis y fotos</h3>
+                        <p class="timeline-description">Momento para compartir palabras especiales y capturar recuerdos</p>
+                    </div>
+                    <div class="timeline-content timeline-content-right">
+                        <div class="timeline-time">7:00 PM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-event fade-in slide-right" data-delay="1400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content-left">
+                        <div class="timeline-time">8:00 PM</div>
+                    </div>
+                    <div class="timeline-content timeline-content-right">
+                        <div class="timeline-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3 class="timeline-title">Pastel</h3>
+                        <p class="timeline-description">Corte del pastel de bodas y dulce celebración</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-event fade-in slide-left" data-delay="1600">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content-left">
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h3 class="timeline-title">Comienza el viaje</h3>
+                        <p class="timeline-description">Comienza el viaje, no solo en kilómetros, sino en cada sonrisa, abrazo y recuerdo que vamos construyendo juntos.</p>
+                    </div>
+                    <div class="timeline-content timeline-content-right">
+                        <div class="timeline-time">9:00 PM</div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="location-overlay"></div>
+        <div class="container">
+            <div class="location-content fade-in slide-up">
+                <h2 class="section-title">Lugar del Evento</h2>
+                <div class="divider"></div>
+                <p class="location-text">Nos reuniremos en Green Box, un espacio elegante donde celebraremos este momento especial. La dirección es Cerro Alux, 106, San Lucas Sacatepéquez, con fácil acceso y estacionamiento disponible.</p>
+                
+                <!-- Nuevos botones para Waze y Maps -->
+                <div class="btn-group">
+                    <a href="https://www.waze.com/es/live-map/directions/green-box-acceso-a-cerro-alux-106-san-lucas-sacatepequez?to=place.w.176554130.1765279157.23785344" target="_blank" class="btn btn-waze">
+                        <i class="fab fa-waze"></i> Ver dirección en Waze
+                    </a>
+                    <a href="https://maps.app.goo.gl/4n9VCXmo3gvJMV1d8?g_st=com.google.maps.preview.copy" target="_blank" class="btn btn-maps">
+                        <i class="fas fa-map-marker-alt"></i> Ver dirección en Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección: Galería de Fotos con PhotoSwipe -->
+    <section class="photo-gallery section-padding light-bg">
+        <div class="container">
+            <h2 class="section-title fade-in slide-up">Galería de Fotos</h2>
+            <div class="divider fade-in slide-up" data-delay="200"></div>
+            <p class="gallery-text fade-in slide-up" data-delay="300">Algunos momentos especiales que hemos compartido juntos</p>
+            
+            <div class="pswp-gallery" id="photo-gallery">
+                <div id="galery" class="fade-in slide-up">
+                    <div class="galery-container">
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-20.jpg" alt="Imagen 1">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-10.jpg" alt="Imagen 2">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-4.jpg" alt="Imagen 3">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-7.jpg" alt="Imagen 4">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-9.jpg" alt="Imagen 5">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-15.jpg" alt="Imagen 6">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-1.jpg" alt="Imagen 7">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-12.jpg" alt="Imagen 8">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-5.jpg" alt="Imagen 9">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-13.jpg" alt="Imagen 10">
+                        </figure>
+                        <figure class="galery-item">
+                            <img src="images/galery/eliyrichi-14.jpg" alt="Imagen 11">
+                        </figure>
+                    </div>
+                    <nav class="galery-navigation">
+                        <button class="nav-button prev-button"><span>&#60;</span></button>
+                        <button class="nav-button next-button"><span>&#62;</span></button>
+                    </nav>                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección: Código de Vestimenta -->
+    <section class="dress-code section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in slide-up">Código de Vestimenta</h2>
+            <div class="divider fade-in slide-up" data-delay="200"></div>
+            <p class="dress-code-intro fade-in slide-up" data-delay="300">Nos encantaría que nos acompañes con vestimenta formal para esta ocasión tan especial, en la que celebraremos el regalo del amor y el inicio de nuestro matrimonio.</p>
+            
+            <div class="dress-code-options">
+                <!-- Código para hombres -->
+                <div class="dress-code-option fade-in slide-left" data-delay="400">
+                    <div class="dress-code-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <h3 class="dress-code-title">Caballeros</h3>
+                    <div class="dress-code-content">
+                        <p>Se sugiere traje formal oscuro (negro, azul marino o gris), con camisa blanca y corbata o corbatín.</p>
+                        <ul class="dress-code-list">
+                            <li><i class="fas fa-check"></i> Traje formal</li>
+                            <li><i class="fas fa-check"></i> Camisa de vestir</li>
+                            <li><i class="fas fa-check"></i> Corbata o corbatín</li>
+                            <li><i class="fas fa-check"></i> Zapatos formales</li>
+                        </ul>
+                        <div class="dress-code-note">
+                            <i class="fas fa-info-circle"></i> Evitar colores llamativos en el traje.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Código para mujeres -->
+                <div class="dress-code-option fade-in slide-right" data-delay="600">
+                    <div class="dress-code-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="dress-code-title">Damas</h3>
+                    <div class="dress-code-content">
+                        <p>Se sugiere vestido largo o conjunto tipo cóctel. Pueden usar el color que deseen, excepto blanco (reservado para la novia).</p>
+                        <ul class="dress-code-list">
+                            <li><i class="fas fa-check"></i> Vestido largo o cocktail</li>
+                            <li><i class="fas fa-check"></i> Conjunto elegante</li>
+                            <li><i class="fas fa-check"></i> Accesorios formales</li>
+                            <li><i class="fas fa-check"></i> Calzado elegante</li>
+                        </ul>
+                        <div class="dress-code-note">
+                            <i class="fas fa-info-circle"></i> Por favor, evitar el color blanco.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección: Mesa de Regalos -->
+    <section class="gift-registry section-padding light-bg">
+        <div class="container">
+            <h2 class="section-title fade-in slide-up">Mesa de Regalos</h2>
+            <div class="divider fade-in slide-up" data-delay="200"></div>
+            <p class="invitation-text fade-in slide-up" data-delay="300">Su presencia es nuestro mejor regalo, pero si desean obsequiarnos algo más, aquí tienen algunas opciones:</p>
+            
+            <div class="gift-options">
+                <!-- Bloque 1: Regalos Digitales -->
+                <div class="gift-option fade-in slide-up" data-delay="400">
+                    <div class="gift-option-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="gift-option-title">Regalos Digitales</h3>
+                    <p class="gift-option-description">Si prefieres enviarnos un regalo digital, puedes hacerlo a través del siguiente link:</p>
+                    <div class="gift-option-details">
+                    <a href="https://www.cemaco.com/list/bodaixcoylicardiefilippiarriaga" target="_blank" class="btn btn-gift">
+                        <i class="fas fa-shopping-cart"></i> Comprar Regalo
+                    </a>
+                    </div>
+                </div>
+                
+                <!-- Bloque 2: Número de Cuenta -->
+                <div class="gift-option fade-in slide-up" data-delay="600">
+                    <div class="gift-option-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="gift-option-title">Número de Cuenta</h3>
+                    <p class="gift-option-description">Si prefieres hacer una transferencia bancaria, estos son nuestros datos:</p>
+                    <div class="gift-option-details">
+                        Banco: Bancon Industrial<br>
+                        Titular: Elizabeth Filippi<br>
+                        Cuenta Ahorro: 3627684
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+<section class="rsvp section-padding">
+    <div class="container">
+        <h2 class="section-title fade-in slide-up">Confirma tu Asistencia</h2>
+        <div class="divider fade-in slide-up" data-delay="200"></div>
+        <p class="rsvp-text fade-in slide-up" data-delay="400">Por favor confirma tu asistencia antes del 2 de mayo de 2025</p>
+        
+        <!-- Progress Bar - Mantenemos esta parte -->
+        <div class="progress-container fade-in slide-up" data-delay="600">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Código</div>
+                </div>
+                <div class="progress-line">
+                    <div class="progress-line-inner"></div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Invitados</div>
+                </div>
+                <div class="progress-line">
+                    <div class="progress-line-inner"></div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Confirmación</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nuevo formulario RSVP con selección múltiple -->
+        <form id="rsvp-form" class="rsvp-form fade-in slide-up" data-delay="800">
+            <!-- Paso 1: Ingresar código -->
+            <div class="form-step active" data-step="1">
+                <div class="form-group">
+                    <label for="invitation-code">Ingresa tu código de invitación</label>
+                    <input type="text" id="invitation-code" name="invitation-code" placeholder="Ej: ABC123" required>
+                    <div class="error-message" id="code-error"></div>
+                    <div class="info-message">El código está incluido en el mensaje que te enviamos por WhatsApp.</div>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" id="verify-code" class="btn btn-next">Verificar Código</button>
+                </div>
+            </div>
+            
+            <!-- Paso 2: Seleccionar múltiples invitados -->
+            <div class="form-step" data-step="2">
+                <div class="form-group">
+                    <label>Selecciona los invitados que deseas confirmar</label>
+                    <div id="guests-list" class="guests-list">
+                        <!-- Los invitados se generarán dinámicamente aquí -->
+                    </div>
+                    <div class="error-message" id="guest-error"></div>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-prev">Anterior</button>
+                    <button type="button" id="select-guests" class="btn btn-next">Siguiente</button>
+                </div>
+            </div>
+            
+            <!-- Paso 3: Confirmar asistencia -->
+            <div class="form-step" data-step="3">
+                <div class="form-group">
+                    <label>¿Confirmas la asistencia de los invitados seleccionados?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="attending-yes" name="attending" value="yes" checked>
+                            <label for="attending-yes">Sí, asistiremos</label>
+                        </div>
+                        <div class="radio-option zoom-option">
+                            <input type="radio" id="attending-zoom" name="attending" value="zoom">
+                            <label for="attending-zoom"><i class="fas fa-video"></i> Veremos la boda por Zoom</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="attending-no" name="attending" value="no">
+                            <label for="attending-no">No podremos asistir</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje para los novios (opcional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <div class="form-summary">
+                    <h3>Resumen de tu confirmación</h3>
+                    <div id="summary-content"></div>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-prev">Anterior</button>
+                    <button type="submit" class="btn btn-submit">Confirmar Asistencia</button>
+                </div>
+            </div>
+        </form>
+        
+        <div id="form-success" class="form-success hidden">
+            <h3>¡Gracias por confirmar!</h3>
+            <p>Hemos recibido tu respuesta. Nos vemos en la celebración.</p>
+        </div>
+
+        <div id="form-loading" class="form-loading hidden">
+            <div class="spinner"></div>
+            <p>Enviando tu confirmación...</p>
+        </div>
+
+        <div id="form-error" class="form-error hidden">
+            <h3>Ha ocurrido un error</h3>
+            <p>No pudimos procesar tu confirmación. Por favor, intenta nuevamente más tarde.</p>
+            <button type="button" class="btn btn-retry">Intentar nuevamente</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Con amor, Elizabeth & Ricardo</p>
+            <p class="code-text"><span class="code">"Donde las vidas se encuentran para siempre"</span></p>
+        </div>
+    </footer>
+    <script src="js/emailjs-config.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/rsvp.js"></script>
+</body>
+</html>
