@@ -586,7 +586,10 @@ img {
   line-height: 1.8; /* Mejorado para mejor legibilidad */
   color: var(--white); /* Mantener blanco para contraste sobre la imagen oscura */
 }
-
+/* En la sección "Location Section", cambiar el color del título a dorado */
+.location-content .section-title {
+  color: var(--gold); /* Cambiado a dorado */
+}
 /* Nueva sección: Galería de Fotos con PhotoSwipe - Mejorada */
 .photo-gallery {
   text-align: center;
