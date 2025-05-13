@@ -742,12 +742,13 @@ figure {
 }
 
 .dress-code-note {
-  background-color: var(--black);
+  background-color: var(--navy); /* Cambiado de var(--black) a var(--navy) */
   padding: 1rem;
   border-radius: var(--border-radius);
   font-style: italic;
   display: flex;
   align-items: center;
+  color: var(--white); /* Añadido para asegurar que el texto sea blanco */
 }
 
 .dress-code-note i {
