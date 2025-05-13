@@ -674,7 +674,7 @@ figure {
   max-width: 800px;
   margin: 0 auto 3rem;
   font-size: 1.125rem;
-  color: var(--black);
+  color: var(--gray-dark);
   line-height: 1.8; /* Mejorado para mejor legibilidad */
 }
 
