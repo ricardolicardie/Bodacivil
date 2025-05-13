@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return
     }
 
+    // Efecto hover para la instrucción
+    const instruction = document.querySelector(".seal-instruction")
+    if (instruction) {
+      instruction.addEventListener("mouseover", () => {
+        instruction.style.backgroundColor = "rgba(212, 175, 55, 0.15)"
+      })
+
+      instruction.addEventListener("mouseout", () => {
+        instruction.style.backgroundColor = "rgba(212, 175, 55, 0.05)"
+      })
+    }
+
     // Agregar evento de clic al contenedor del sello
     sealContainer.addEventListener("click", () => {
       console.log("Sello clickeado") // Para depuración
@@ -41,6 +53,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 })
-
-
-
