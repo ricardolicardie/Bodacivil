@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Contador regresivo
 function initCountdown() {
-  const targetDate = new Date("May 31, 2025 00:00:00").getTime()
+  const targetDate = new Date("Jun 07, 2025 15:30:00").getTime()
 
   function updateCountdown() {
     const now = new Date().getTime()
