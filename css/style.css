@@ -736,7 +736,7 @@ figure {
 }
 
 .dress-code-list li i {
-  color: #fff; /* Mantenido en dorado */
+  color: var(--gold); /* Mantenido en dorado */
   margin-right: 0.75rem;
   font-size: 1rem;
 }
@@ -751,7 +751,7 @@ figure {
 }
 
 .dress-code-note i {
-  color: #FFF;
+  color: var(--white);
   margin-right: 0.75rem;
   font-size: 1.25rem;
 }
