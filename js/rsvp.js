@@ -1,15 +1,66 @@
 // Base de datos simulada de invitados
 const guestDatabase = [
   {
-    code: "FPA",
+    code: "FFV",
     guests: [
-      { id: 1, name: "Mercy", confirmed: null },
-      { id: 2, name: "Andre", confirmed: null },
-      { id: 3, name: "Rodri", confirmed: null },
+      { id: 1, name: "Pedro", confirmed: null },
+      { id: 2, name: "Lesbia", confirmed: null },
+      { id: 3, name: "Vane", confirmed: null },
+      { id: 4, name: "Pietro", confirmed: null },
     ],
   },
-    code: "TEST",
-    guests: [{ id: 119, name: "Invitado de Prueba", confirmed: null }],
+  {
+    code: "SFA",
+    guests: [
+      { id: 5, name: "Sofi", confirmed: null },
+      { id: 6, name: "Novio de Sofi", confirmed: null },
+    ],
+  },
+{
+    code: "AFA",
+    guests: [
+      { id: 7, name: "Beto", confirmed: null },
+      { id: 8, name: "Lucia", confirmed: null },
+    ],
+  },
+{
+    code: "RFA",
+    guests: [
+      { id: 9, name: "Roberto", confirmed: null },
+    ],
+  },
+{
+    code: "JPF",
+    guests: [
+      { id: 10, name: "Juan Pablo", confirmed: null },
+      { id: 11, name: "Novia de Juan Pablo", confirmed: null },
+    ],
+  },
+{
+    code: "CFA",
+    guests: [
+      { id: 12, name: "Sofi", confirmed: null },
+    ],
+  },
+{
+    code: "FFG",
+    guests: [
+      { id: 13, name: "Aldo", confirmed: null },
+      { id: 14, name: "Andrea", confirmed: null },
+      { id: 15, name: "Aldito", confirmed: null },
+    ],
+  },
+{
+    code: "GXA",
+    guests: [
+      { id: 16, name: "Gaby Arriaga", confirmed: null },
+      { id: 17, name: "Jimena Arriaga", confirmed: null },
+    ],
+  },
+
+  { 
+  code: "TEST",
+    guests: [{ id: 18, name: "Invitado de Prueba", confirmed: null }],
   },
 ]
 
